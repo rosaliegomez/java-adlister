@@ -8,8 +8,8 @@ public class HelloWorldServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        String name = request.getParameter("name");
+        PrintWriter out = response.getWriter(); // is output
+        String name = request.getParameter("name");//is input
         if(name != null){
             out.println("<h3> Hello " + name + "</h3>");
         }else out.println("<h3> Hello World </h3>");
