@@ -34,6 +34,11 @@ public class MySQLAdsDao implements Ads {
         try {
             stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM ads");
+            //Prepared Statements can be used here, but don't have to be used because no user input is being taken in.
+            //PreparedStatement  stmt;
+            //try {
+            //stmt = connection.prepareStatement(sql"SELECT * FROM ads");
+            //ResultsSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);

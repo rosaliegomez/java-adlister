@@ -30,7 +30,7 @@
         </div>
         <div class="form-group">
             <label for="password">password</label>
-            <textarea id="password" name="password" class="form-control" input type="password"></textarea>
+           <input type="password" id="password" name="password" class="form-control">
         </div>
         <input type="submit" class="btn btn-block btn-primary">
     </form>
